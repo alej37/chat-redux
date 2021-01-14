@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class MessageForm extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       value: ''
     }
@@ -15,7 +15,6 @@ class MessageForm extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.createMessage(this.state.value);
   }
   render() {
     return (

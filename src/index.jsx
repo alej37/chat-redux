@@ -7,10 +7,27 @@ import { createStore, combineReducers } from 'redux';
 // internal modules
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
+import messagesReducer from './reducers/messages_reducer';
+import channelsReducer from './reducers/channels_reducer';
+import currentUserReducer from './reducers/current_user_reducer';
+import channelSelectedReducer from './reducers/channel_selected_reducer';
+
+// user initial state
+
+const initialState = {
+  messages: [],
+  channelList: ['general', 'chat', 'quebec'],
+  username: prompt("what is your username?") || `annonymous${Math.floor(10 +(Math.random() * 90))}`,
+  selectedChannel: 'general'
+};
+
 
 // State and reducers
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  messages: messagesReducer,
+  channels: channelsReducer,
+  currentUser: currentUserReducer,
+  channelSelected: channelSelectedReducer
 });
 
 // render an instance of the component in the DOM

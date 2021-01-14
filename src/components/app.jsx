@@ -2,8 +2,8 @@ import React from 'react';
 
 
 // components
-import ChannelList from './channel_list';
-import MessageList from './message_list';
+import ChannelList from '../containers/channel_list';
+import MessageList from '../containers/message_list';
 
 const App = () => {
   return (
