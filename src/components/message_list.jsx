@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Message from '../containers/message';
+import MessageForm from '../containers/message_form';
 
 
 class MessageList extends Component {
@@ -8,6 +9,7 @@ class MessageList extends Component {
       <div>
         <h1>Channel #general</h1>
         <Message />
+        <MessageForm />
       </div>
     );
   }
