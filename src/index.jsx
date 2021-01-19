@@ -30,6 +30,7 @@ const reducers = combineReducers({
   channels: channelsReducer,
   currentUser: currentUserReducer,
   channelSelected: channelSelectedReducer
+
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);
